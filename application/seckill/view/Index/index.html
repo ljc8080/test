@@ -1,0 +1,75 @@
+
+	<title>品优购秒杀-正品秒杀！</title>
+    <link rel="stylesheet" type="text/css" href="/static/home/css/pages-seckill-index.css" />
+	<div class="py-container index">
+		<!--banner-->
+		<div class="banner">
+			<img src="/static/home/img/_/banner.png" class="img-responsive" alt="">
+		</div>
+		<!--秒杀时间-->
+		<div class="sectime">
+			{foreach $scene as $v}
+			<div class="item-time active" seckill_id={{$v.id}}>
+				<div class="time-clock">{$v.start_time}</div>
+				<div class="time-state-on">
+					<span class="on-text">快抢中</span>
+					<span class="on-over">距离结束：01:02:34</span>
+				</div>
+			</div>
+			{/foreach}
+		</div>
+		<!--商品列表-->
+		<div class="goods-list">
+			{foreach $data as $v}
+			<ul class="seckill" class="seckill" style="display:none">
+				{foreach $v['goods'] as $value}
+				<li class="seckill-item">
+					<div class="pic">
+						<img src="{$value.goods_logo}" alt=''>
+					</div>
+					<div class="intro"><span>{$value.goods_name}</span></div>
+					<div class='price'><b class='sec-price'>￥{$value.cost_price}</b><b class='ever-price'>￥{$value.goods_price}</b></div>
+					<div class='num'>
+						<div>已售87%</div>
+						<div class='progress'>
+							<div class='sui-progress progress-danger'><span style='width: 70%;' class='bar'></span></div>
+						</div>
+						<div>剩余<b class='owned'>{$value.goods_number}</b>件</div>
+					</div>
+					<a class='sui-btn btn-block btn-buy' href='{:url('seckill/logic/start',['id'=>$value.id])}' target='_blank'>立即抢购</a>
+				</li>
+				{/foreach}
+			</ul>
+			{/foreach}
+		</div>
+		<div class="cd-top">
+			<div class="top">
+				<img src="/static/home/img/_/gotop.png" />
+				<b>TOP</b>
+			</div>
+			<div class="code" id="code">
+				<span><img src="/static/home/img/_/code.png"/></span>
+			</div>
+			<div class="erweima">
+				<img src="/static/home/img/_/erweima.jpg" alt="">
+				<s></s>
+			</div>
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src="/static/home/js/pages/seckill-index.js"></script>
+<script>
+	   $(function(){
+		   $("#code").hover(function(){
+			   $(".erweima").show();
+		   },function(){
+			   $(".erweima").hide();
+		   });
+	   })
+	   $('.seckill').eq(0).show();
+	</script>
+</body>
+
+</html>

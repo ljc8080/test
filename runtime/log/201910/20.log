@@ -1,0 +1,42 @@
+---------------------------------------------------------------
+[ 2019-10-20T18:17:41+08:00 ] 127.0.0.1 GET www.pyg.com/
+[运行时间：1.552217s] [吞吐率：0.64req/s] [内存消耗：3,345.88kb] [文件加载：62]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->Index[ F:\www\pyg\application\home\controller\Index.php ]
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\index\index.html [ array (
+  0 => 'category',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054810s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_category` [ RunTime:0.077153s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid`,`pid_path`,`pid_path_name`,`level`,`sort`,`is_show`,`image_url`,`is_hot` FROM `pyg_category` WHERE  `is_show` = 1 ORDER BY `sort` DESC [ RunTime:0.035407s ]

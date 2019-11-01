@@ -1,0 +1,599 @@
+---------------------------------------------------------------
+[ 2019-10-18T11:05:18+08:00 ] 127.0.0.1 GET www.pyg.com/
+[运行时间：1.195238s] [吞吐率：0.84req/s] [内存消耗：3,345.88kb] [文件加载：62]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->Index[ F:\www\pyg\application\home\controller\Index.php ]
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\index\index.html [ array (
+  0 => 'category',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011283s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_category` [ RunTime:0.082261s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid`,`pid_path`,`pid_path_name`,`level`,`sort`,`is_show`,`image_url`,`is_hot` FROM `pyg_category` WHERE  `is_show` = 1 ORDER BY `sort` DESC [ RunTime:0.045428s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:31+08:00 ] 127.0.0.1 GET www.pyg.com/home/shop_car/successcart?goods_id=100&number=1&spec_goods_id=840
+[运行时间：0.344165s] [吞吐率：2.91req/s] [内存消耗：3,686.80kb] [文件加载：64]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'shop_car',
+    2 => 'successcart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/shop_car/successcart' => '',
+  'goods_id' => '100',
+  'number' => '1',
+  'spec_goods_id' => '840',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\ShopCar->successcart[ F:\www\pyg\application\home\controller\ShopCar.php ]
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\shop_car\success-cart.html [ array (
+  0 => 'category',
+  1 => 'addCarGood',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004890s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_spec_goods` [ RunTime:0.036820s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_spec_goods` `a` LEFT JOIN `pyg_goods` `b` ON `a`.`goods_id`=`b`.`id` WHERE  `b`.`id` = '100'  AND `a`.`id` = '840' LIMIT 1 [ RunTime:0.009064s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:36+08:00 ] 127.0.0.1 GET www.pyg.com/home/cart_list/index.html
+[运行时间：0.293301s] [吞吐率：3.41req/s] [内存消耗：3,627.51kb] [文件加载：64]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart_list',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/home/shop_car/successcart?goods_id=100&number=1&spec_goods_id=840',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/cart_list/index_html' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\CartList->index[ F:\www\pyg\application\home\controller\CartList.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\shop_car\index.html [ array (
+  0 => 'category',
+  1 => 'goodsinfo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001490s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_cart` [ RunTime:0.034898s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_cart` WHERE  `user_id` = 32 [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_spec_goods` [ RunTime:0.019916s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_spec_goods` `a` LEFT JOIN `pyg_goods` `b` ON `a`.`goods_id`=`b`.`id` WHERE  `b`.`id` = 100  AND `a`.`id` = 845 LIMIT 1 [ RunTime:0.001216s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:38+08:00 ] 127.0.0.1 GET www.pyg.com/order/settlement
+[运行时间：0.404979s] [吞吐率：2.47req/s] [内存消耗：3,737.22kb] [文件加载：71]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'settlement',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/home/cart_list/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/order/settlement' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->settlement[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\order\settlement.html [ array (
+  0 => 'category',
+  1 => 'goodsinfo',
+  2 => 'address',
+  3 => 'num',
+  4 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001260s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_address` [ RunTime:0.027363s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`consignee`,`phone`,`province`,`city`,`district`,`area`,`address`,`is_default` FROM `pyg_address` WHERE  `user_id` = 32 [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_cart` [ RunTime:0.022050s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_cart` WHERE  `user_id` = 32  AND `is_selected` = 1 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.023466s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_goods` WHERE  `id` IN (100) [ RunTime:0.001261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_spec_goods` [ RunTime:0.025788s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_spec_goods` WHERE  `id` IN (845) [ RunTime:0.000681s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:41+08:00 ] 127.0.0.1 POST www.pyg.com/order/add
+[运行时间：0.139340s] [吞吐率：7.18req/s] [内存消耗：3,205.83kb] [文件加载：59]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'add',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/order/settlement',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/order/add' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->add[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001835s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_address` [ RunTime:0.038086s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`consignee`,`phone`,`province`,`city`,`district`,`area`,`address`,`is_default` FROM `pyg_address` WHERE  `user_id` = 32  AND `id` IS NULL LIMIT 1 [ RunTime:0.000750s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:46+08:00 ] 127.0.0.1 POST www.pyg.com/order/add
+[运行时间：0.610265s] [吞吐率：1.64req/s] [内存消耗：3,413.69kb] [文件加载：62]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'add',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/order/settlement',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '12',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/order/add' => '',
+  'address_id' => '5',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->add[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002399s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_address` [ RunTime:0.036696s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`consignee`,`phone`,`province`,`city`,`district`,`area`,`address`,`is_default` FROM `pyg_address` WHERE  `user_id` = 32  AND `id` = 5 LIMIT 1 [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_order` [ RunTime:0.025013s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_order` (`user_id` , `consignee` , `order_sn` , `address` , `phone` , `goods_price` , `coupon_price` , `order_amount` , `total_amount`) VALUES (32 , '小小' , '1571368486491365332' , '通天大道98号' , '19987654232' , 3340 , 3340 , 3340 , 3340) [ RunTime:0.159334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_order_goods` [ RunTime:0.027861s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_order_goods` (`order_id` , `goods_id` , `spec_goods_id` , `number` , `goods_name` , `goods_logo` , `goods_price` , `spec_value_names`) VALUES ( '124',100,845,1,'oppofindx','\\uploads\\goods\\20190923\\thumb_thumb_0dbf62a7e92a60ed36d583d1bae63910.png','3340.00','颜色:红色 版本:全网通（6G+64G）' ) [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.026999s ]
+[ sql ] [ SQL ] UPDATE `pyg_goods`  SET `goods_number`=9965,`frozen_number`=34,`update_time`=1571368486  WHERE  `id` = 100 [ RunTime:0.025107s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_spec_goods` [ RunTime:0.025852s ]
+[ sql ] [ SQL ] UPDATE `pyg_spec_goods`  SET `store_count`=999,`store_frozen`=1,`update_time`=1571368486  WHERE  `id` = 845 [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_cart` [ RunTime:0.023834s ]
+[ sql ] [ SQL ] DELETE FROM `pyg_cart`    WHERE  `user_id` = 32  AND `is_selected` = 1 [ RunTime:0.000713s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:47+08:00 ] 127.0.0.1 GET www.pyg.com/pay/index?oid=124
+[运行时间：1.251797s] [吞吐率：0.80req/s] [内存消耗：4,162.29kb] [文件加载：92]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/order/settlement',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/pay/index' => '',
+  'oid' => '124',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Pay->index[ F:\www\pyg\application\home\controller\Pay.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\pay\index.html [ array (
+  0 => 'category',
+  1 => 'qr_path',
+  2 => 'order',
+  3 => 'pay',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001625s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_order` [ RunTime:0.024343s ]
+[ sql ] [ SQL ] SELECT `id`,`order_sn`,`order_amount` FROM `pyg_order` WHERE  `user_id` = 32  AND `id` = 124 LIMIT 1 [ RunTime:0.001183s ]
+---------------------------------------------------------------
+[ 2019-10-18T11:14:49+08:00 ] 127.0.0.1 POST www.pyg.com/home/order/status.html
+[运行时间：0.432031s] [吞吐率：2.31req/s] [内存消耗：2,323.30kb] [文件加载：48]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/pay/index?oid=124',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '28',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/order/status_html' => '',
+  'order_sn' => '1571368486491365332',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->status[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-18T11:14:50+08:00 ] 127.0.0.1 POST www.pyg.com/home/order/status.html
+[运行时间：0.140958s] [吞吐率：7.09req/s] [内存消耗：2,323.30kb] [文件加载：48]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/pay/index?oid=124',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '28',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/order/status_html' => '',
+  'order_sn' => '1571368486491365332',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->status[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-18T11:14:52+08:00 ] 127.0.0.1 POST www.pyg.com/home/order/status.html
+[运行时间：0.175190s] [吞吐率：5.71req/s] [内存消耗：2,323.30kb] [文件加载：48]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/pay/index?oid=124',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '28',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/order/status_html' => '',
+  'order_sn' => '1571368486491365332',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->status[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-18T11:14:53+08:00 ] 127.0.0.1 POST www.pyg.com/home/order/status.html
+[运行时间：0.162094s] [吞吐率：6.17req/s] [内存消耗：2,323.30kb] [文件加载：48]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/pay/index?oid=124',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '28',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/order/status_html' => '',
+  'order_sn' => '1571368486491365332',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->status[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-18T11:14:53+08:00 ] 127.0.0.1 POST www.pyg.com/home/order/status.html
+[运行时间：0.192472s] [吞吐率：5.20req/s] [内存消耗：2,323.30kb] [文件加载：48]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/pay/index?oid=124',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.pyg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '28',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/order/status_html' => '',
+  'order_sn' => '1571368486491365332',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->status[ F:\www\pyg\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-18T11:14:53+08:00 ] 127.0.0.1 POST www.pyg.com/pay/submit
+[运行时间：3.291074s] [吞吐率：0.30req/s] [内存消耗：3,239.13kb] [文件加载：59]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.pyg.com/pay/index?oid=124',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://www.pyg.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/pay/submit' => '',
+  'type' => 'alipay',
+  'oid' => '124',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Pay->pay[ F:\www\pyg\application\home\controller\Pay.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001727s ] mysql:host=127.0.0.1;port=3306;dbname=pyg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_order` [ RunTime:0.026134s ]
+[ sql ] [ SQL ] SELECT `order_sn`,`order_amount`,`user_note` FROM `pyg_order` WHERE  `user_id` = 32  AND `id` = 124 LIMIT 1 [ RunTime:0.000637s ]
+---------------------------------------------------------------
+[ 2019-10-18T19:54:36+08:00 ] 127.0.0.1 GET www.pyg.com/
+[运行时间：0.171727s] [吞吐率：5.82req/s] [内存消耗：3,023.25kb] [文件加载：59]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Thu, 17 Oct 2019 12:45:31 GMT',
+  'if-none-match' => '"5da8626b-264"',
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Index->Index[ F:\www\pyg\application\home\controller\Index.php ]
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\index\index.html [ array (
+  0 => 'category',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File

@@ -1,0 +1,59 @@
+---------------------------------------------------------------
+[ 2019-10-29T17:37:17+08:00 ] 127.0.0.1 GET www.pyg.com/home/test/redis
+[运行时间：0.486462s] [吞吐率：2.06req/s] [内存消耗：1,600.23kb] [文件加载：53]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'test',
+    2 => 'redis',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/test/redis' => '',
+)
+[ info ] [ RUN ] app\home\controller\Test->redis[ F:\www\pyg\application\home\controller\Test.php ]
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-29T17:37:28+08:00 ] 127.0.0.1 GET www.pyg.com/home/test/redis
+[运行时间：0.064225s] [吞吐率：15.57req/s] [内存消耗：1,600.53kb] [文件加载：53]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'test',
+    2 => 'redis',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/test/redis' => '',
+)
+[ info ] [ RUN ] app\home\controller\Test->redis[ F:\www\pyg\application\home\controller\Test.php ]
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File

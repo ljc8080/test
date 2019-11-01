@@ -1,0 +1,105 @@
+---------------------------------------------------------------
+[ 2019-10-13T08:47:13+08:00 ] 127.0.0.1 GET www.pyg.com/
+[运行时间：0.308987s] [吞吐率：3.24req/s] [内存消耗：2,748.28kb] [文件加载：57]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Index->Index[ F:\www\pyg\application\home\controller\Index.php ]
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\index\index.html [ array (
+  0 => 'category',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-13T08:51:53+08:00 ] 127.0.0.1 GET www.pyg.com/
+[运行时间：0.087706s] [吞吐率：11.40req/s] [内存消耗：2,748.29kb] [文件加载：57]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Index->Index[ F:\www\pyg\application\home\controller\Index.php ]
+[ info ] [ VIEW ] F:\www\pyg\public/../application/home\view\index\index.html [ array (
+  0 => 'category',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-13T08:58:33+08:00 ] 127.0.0.1 GET www.pyg.com/home/test/cookie
+[运行时间：0.209780s] [吞吐率：4.77req/s] [内存消耗：1,559.77kb] [文件加载：51]
+[ info ] [ LANG ] F:\www\pyg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'test',
+    2 => 'cookie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6815993856; thinkphp_show_page_trace=0|0; PHPSESSID=i6rhrs0bmkihb9f6s6gmvjufjh; login=123',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.pyg.com',
+)
+[ info ] [ PARAM ] array (
+  '/home/test/cookie' => '',
+)
+[ info ] [ RUN ] app\home\controller\Test->cookie[ F:\www\pyg\application\home\controller\Test.php ]
+[ info ] [ LOG ] INIT File
