@@ -34,6 +34,7 @@ class Git extends Controller
         $res_log = '';
         // 判断签名是否匹配  
         if ($hash === $payloadHash) {
+            response($content['commits'],500);
             $cmd = "cd $target && git reset --hard && git clean -f && git pull";
             $res = shell_exec($cmd);
             $res_log .= 'Success:'. PHP_EOL;
