@@ -197,7 +197,7 @@ return [
         'prefix' => '',
         // 缓存有效期 0表示永久缓存
         'expire' => 0,
-        'host' => '127.0.0.1',
+        'host' => '106.13.50.31',
         'port' => 6379,
         'select'=>0,
         'password'=>'1q2w3e'
