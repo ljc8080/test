@@ -8,7 +8,6 @@ class Git extends Controller
 {
     public function init(){
         if(!$this->request->isGet()) die('非法请求');
-        die('2');
         $target = '/www/shop'; // 生产环境web目录
         //密钥
         $secret = "4f83a8308cf40539be09405847082f3c569bd1a0";
