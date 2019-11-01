@@ -7,7 +7,7 @@ use think\Controller;
 class Git extends Controller
 {
     public function init(){
-        if(!$this->request->isGet()) die('非法请求');
+        if(!$this->request->isPost()) die('非法请求');
         $target = '/project'; // 生产环境web目录
         //密钥
         $secret = "4f83a8308cf40539be09405847082f3c569bd1a0";
